@@ -7,7 +7,7 @@ class PlayerArrow {
     this.width = width;
     this.height = height;
     this.body = Bodies.rectangle(x, y, this.width, this.height, options);
-    this.image = loadImage("./assets/arrow.png");
+    this.image = loadImage("assets/arrow.png");
     this.archerAngle = archerAngle;
     this.velocity = 0;
     World.add(world, this.body);
@@ -27,11 +27,6 @@ class PlayerArrow {
   }
 
   display() {
-
-    if(keyCode == 32)
-    {
-      arrow.shoot(playerArcher.body.angle);
-    }
   
     var pos = this.body.position;
     var angle = this.body.angle;
